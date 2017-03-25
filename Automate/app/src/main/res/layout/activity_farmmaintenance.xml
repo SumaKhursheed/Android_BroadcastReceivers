@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#123350"
+    tools:context="com.example.automate.FarmmaintenanceActivity">
+
+    <TextView
+        android:id="@+id/textView_heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="32sp"
+        android:textColor="#0f2037"
+        android:background="#fff"
+        android:text="Farm Maintenance"
+        android:gravity="center"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <TextView
+        android:id="@+id/fanON"
+        android:layout_width="340dp"
+        android:layout_height="100dp"
+        android:background="@drawable/fanrc"
+        android:textColor="#fff"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:text="Fan Status"
+        android:inputType="text"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp"
+        android:layout_marginTop="109dp"
+        android:layout_below="@+id/textView_heading"
+        android:layout_alignLeft="@+id/fansprON"
+        android:layout_alignStart="@+id/fansprON" />
+
+    <TextView
+        android:id="@+id/fansprON"
+        android:layout_width="340dp"
+        android:layout_height="100dp"
+        android:background="@drawable/fanspr"
+        android:textColor="#fff"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:text="Sprinkler Status"
+        android:inputType="text"
+        tools:layout_editor_absoluteY="143dp"
+        tools:layout_editor_absoluteX="96dp"
+        android:layout_marginTop="70dp"
+        android:layout_below="@+id/fanON"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

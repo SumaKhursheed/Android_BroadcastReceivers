@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context="com.example.tempsender.TemphumidActivity">
+
+    <Button
+        android:id="@+id/button_set"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button_closeApp"
+        android:layout_alignBottom="@+id/button_closeApp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_toLeftOf="@+id/humid"
+        android:layout_toStartOf="@+id/humid"
+        android:background="#008e00"
+        android:onClick="onBtnClicked"
+        android:text="Set"
+        android:textColor="#fff" />
+
+    <Button
+        android:id="@+id/button_closeApp"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:onClick="onClickButtonCloseApp"
+        android:text="Cancel"
+        android:textColor="#ffffff"
+        android:background="#008e00"
+        android:layout_marginRight="41dp"
+        android:layout_marginEnd="41dp"
+        android:layout_below="@+id/humid"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="128dp" />
+
+    <EditText
+        android:id="@+id/temp"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:background="@drawable/borderstyle"
+        android:layout_alignTop="@+id/textbox1"
+        android:layout_alignRight="@+id/button_closeApp"
+        android:layout_alignEnd="@+id/button_closeApp" />
+
+
+    <TextView
+        android:id="@+id/textbox1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Temperature(F)"
+        android:textSize="20dp"
+        android:textColor="#fff"
+        android:layout_marginTop="66dp"
+        android:layout_below="@+id/textView_heading"
+        android:layout_alignRight="@+id/button_set"
+        android:layout_alignEnd="@+id/button_set" />
+
+    <TextView
+        android:id="@+id/textbox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Humidity(%)"
+        android:textSize="20dp"
+        android:textColor="#fff"
+        android:layout_alignBaseline="@+id/humid"
+        android:layout_alignBottom="@+id/humid"
+        android:layout_alignRight="@+id/textbox1"
+        android:layout_alignEnd="@+id/textbox1" />
+
+    <TextView
+        android:id="@+id/textView_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="32sp"
+        android:textColor="#fff"
+        android:text="Temperature and Humidity"
+        android:layout_marginTop="18dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+
+    <EditText
+        android:id="@+id/humid"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:background="@drawable/borderstyle"
+        android:layout_below="@+id/textbox1"
+        android:layout_alignLeft="@+id/temp"
+        android:layout_alignStart="@+id/temp"
+        android:layout_marginTop="16dp" />
+
+</RelativeLayout>
+

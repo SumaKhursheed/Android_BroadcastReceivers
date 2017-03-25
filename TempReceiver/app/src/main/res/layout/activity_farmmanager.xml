@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0b2314"
+    tools:context="com.example.tempreceiver.FarmmanagerActivity">
+
+
+    <TextView
+        android:id="@+id/textView_heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="32sp"
+        android:textColor="#0f2037"
+        android:background="#fff"
+        android:text="Farm Manager"
+        android:gravity="center"
+        android:layout_marginTop="18dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/textView_heading2"
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:textSize="32sp"
+        android:textColor="#ecfffb"
+        android:background="@drawable/roundedcorners"
+        android:text="Temperature &amp; Humidity"
+        android:gravity="center"
+        android:layout_marginTop="38dp"
+        android:layout_below="@+id/textView_heading"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:id="@+id/design_line"
+        android:layout_width="3dp"
+        android:layout_height="340dp"
+        android:background="#fff"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/textView_fandata"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:textSize="15sp"
+        android:textColor="#ecfffb"
+        android:background="#0b2314"
+        android:text="Temperature (F) &gt; 70 &amp; Temperature (F) &lt; 90"
+        android:layout_marginRight="11dp"
+        android:layout_marginEnd="11dp"
+        android:layout_below="@+id/textView3"
+        android:layout_toLeftOf="@+id/design_line"
+        android:layout_toStartOf="@+id/design_line"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/textView_fansprdata"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:textSize="15sp"
+        android:textColor="#ecfffb"
+        android:background="#0b2314"
+        android:text="Temperature (F) &gt; 90 &amp; Temperature (F) &lt; 125"
+        android:layout_alignTop="@+id/textView_fandata"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="13dp"
+        android:layout_marginEnd="13dp" />
+
+    <Button
+        android:id="@+id/button_fanON"
+        android:layout_width="140dp"
+        android:layout_height="100dp"
+        android:layout_alignLeft="@+id/textView_fandata"
+        android:layout_alignStart="@+id/textView_fandata"
+        android:layout_below="@+id/textView_fandata"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/fanrc"
+        android:gravity="center"
+        android:onClick="onFanClicked"
+        android:text="Turn Only Fan"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/button_fansprON"
+        android:layout_width="140dp"
+        android:layout_height="100dp"
+        android:layout_alignLeft="@+id/textView_fansprdata"
+        android:layout_alignStart="@+id/textView_fansprdata"
+        android:layout_alignTop="@+id/button_fanON"
+        android:background="@drawable/fanspr"
+        android:gravity="center"
+        android:onClick="onSprClicked"
+        android:text="Turn FAN &amp; Sprinkler"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:textColor="#fff"
+        android:textSize="20dp"
+        android:text="Temperature:"
+        android:layout_below="@+id/textView_heading2"
+        android:layout_alignRight="@+id/textView_fandata"
+        android:layout_alignEnd="@+id/textView_fandata" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:textColor="#fff"
+        android:textSize="20dp"
+        android:text="Humidity:"
+        android:layout_below="@+id/textView2"
+        android:layout_alignRight="@+id/button_fanON"
+        android:layout_alignEnd="@+id/button_fanON" />
+
+    <TextView
+        android:id="@+id/temp"
+        android:inputType="number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#fff"
+        android:textSize="20dp"
+        android:text="Temp Value"
+        android:layout_alignBaseline="@+id/textView2"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_alignLeft="@+id/humid"
+        android:layout_alignStart="@+id/humid" />
+
+    <TextView
+        android:id="@+id/humid"
+        android:inputType="number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#fff"
+        android:textSize="20dp"
+        android:text="Humidity Value"
+        android:layout_alignBaseline="@+id/textView3"
+        android:layout_alignBottom="@+id/textView3"
+        android:layout_alignLeft="@+id/textView_fansprdata"
+        android:layout_alignStart="@+id/textView_fansprdata" />
+
+</RelativeLayout>
